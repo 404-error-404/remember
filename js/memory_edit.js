@@ -30,7 +30,7 @@ $(document).ready(function () {
            //将cookie中的token信息放于请求头中
             request.setRequestHeader("token", $.cookie('token'));
         },
-        url: "http://remember.icube.fun:8080/getTags", //
+        url: "http://remember.icube.fun:8080/getTags", // 
         dataType: "json",
         success: function (rtmsg) {
             //data是返回的hash,key之类的值，key是定义的文件名
@@ -86,7 +86,7 @@ $(document).ready(function () {
         if(imgSrc.length>=20){
         	return alert("最多只能上传20张图片");
         }
-
+        
         var imgSize = this.files[0].size;  //b
         if (imgSize > 1024 * 1024 * 5) {//5M
             return alert("上传图片不能超过5M");
@@ -108,7 +108,7 @@ $(document).ready(function () {
             imgSrc.push(imgSrcI);
             imgFile.push(fileList[i]);
             imgNum++;
-        }
+        } 
         if(imgSrc.length>=20){//隐藏上传按钮
         	$('.content-img .file').hide();
         }
@@ -136,7 +136,7 @@ $(document).ready(function () {
             alert("记忆标题不能为空");
             return;
         }
-
+        
         //获取标签列表
         var jsonArrayStr = '[]';
         var jsonArray = eval('(' + jsonArrayStr + ')');
@@ -201,15 +201,15 @@ $(document).ready(function () {
         /*提交*/
         $.ajax({
             type: "POST",
-            url: "http://remember.icube.fun:8080/saveMemory", //
+            url: "http://remember.icube.fun:8080/saveMemory", //  
             beforeSend: function (request) {
                 //将cookie中的token信息放于请求头中
                  request.setRequestHeader("token", $.cookie('token'));
-             },
+             }, 
             //ContentType: "multipart/form-data",
             processData: false,
             contentType: false,
-            cache: false,
+            cache: false,  
             data: formFile,
             dataType:'json',
             success: function (rtmsg) {
@@ -297,7 +297,7 @@ function getObjectURL(file) {
 //             // 手动在服务器上删除图片
 //             $.ajax({
 //                 type: "POST",
-//                 url: "/xx/deleteImage", //
+//                 url: "/xx/deleteImage", //  
 //                 data: { "imageUrl": url },
 //                 dataType: "json",
 //                 success: function (data) {
@@ -372,3 +372,4 @@ function getObjectURL(file) {
 //     //返回i值
 //     return -1;
 // }
+
