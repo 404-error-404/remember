@@ -56,7 +56,7 @@
                                                 <input class="form-control" type="email" id="emailaddress" required="" placeholder="请输入您常用的邮箱" onblur="verifyEmailAddress()">
 											</div>
 											
-											<label for="verificationCode" class="font-weight-medium">验证码</label>
+											<label for="code" class="font-weight-medium">验证码</label>
 											<span class="text-muted float-right" id="message_code"></span>
 											<div class="media mb-4 mt-1">
 												<div class="media-body">
@@ -163,9 +163,7 @@
 						}
 					},
 					error:function(XMLHttpRequest, textStatus, errorThrown){
-						alert("请求对象XMLHttpRequest: "+XMLHttpRequest);
-						alert("错误类型textStatus: "+textStatus);
-						alert("异常对象errorThrown: "+errorThrown);
+                        alert("网络请求错误！");
 					}
 				});
 			});
@@ -214,9 +212,7 @@
 						}
 					},
 					error:function(XMLHttpRequest, textStatus, errorThrown){
-						alert("请求对象XMLHttpRequest: "+XMLHttpRequest);
-						alert("错误类型textStatus: "+textStatus);
-						alert("异常对象errorThrown: "+errorThrown);
+                        alert("网络请求错误！");
 					}
 				});
 			});

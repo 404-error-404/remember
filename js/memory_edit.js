@@ -229,8 +229,8 @@ $(document).ready(function () {
             },
             error: function (request,textStatus,errorThrown) {
                 alert("记忆提交错误");
-                console.log(textStatus);
-                console.log(errorThrown);
+                // console.log(textStatus);
+                // console.log(errorThrown);
             }
         });
         console.log("end hand-in");

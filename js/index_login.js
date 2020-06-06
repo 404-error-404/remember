@@ -66,6 +66,7 @@ function initial() {
 
         },
         error:function(XMLHttpRequest, textStatus, errorThrown){
+            alert("网络请求错误！");
             // alert("请求对象XMLHttpRequest: "+XMLHttpRequest);
             // alert("错误类型textStatus: "+textStatus);
             // alert("异常对象errorThrown: "+errorThrown);
