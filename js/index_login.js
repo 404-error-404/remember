@@ -24,16 +24,16 @@ $(document).ready(function()
 function initial() {
     var list=[];
     //重定向
-    $.ajaxSetup({
-        complete:function (xhr,status) {
-            xhr.getAllResponseHeaders();
-            console.log(xhr);
-            let REDIRECT=xhr.getResponseHeader("REDIRECT");
-            if(REDIRECT==="redirect"){
-                window.location.href="index_login.html";
-            }
-        }
-    });
+    // $.ajaxSetup({
+    //     complete:function (xhr,status) {
+    //         xhr.getAllResponseHeaders();
+    //         console.log(xhr);
+    //         let REDIRECT=xhr.getResponseHeader("REDIRECT");
+    //         if(REDIRECT==="redirect"){
+    //             window.location.href="index_login.html";
+    //         }
+    //     }
+    // });
     $.ajax({
 
         url:"http://remember.icube.fun:8080/findAllMemory",
